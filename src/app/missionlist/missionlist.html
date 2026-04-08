@@ -1,0 +1,22 @@
+<div class="mission-container">
+  <h1>SpaceX Mission Launch List</h1>
+
+  <div class="search-bar">
+    <input type="text" (input)="updateFilter($event)" placeholder="Search by Launch Year (e.g. 2006)">
+  </div>
+
+  <div class="mission-list">
+    @for (mission of filteredMissions(); track mission.flight_number) {
+      <div class="mission-card" (click)="selectMission(mission.flight_number)">
+        <div class="card-layout">
+          <img [src]="mission.links.mission_patch_small" alt="Patch" class="mission-patch">
+          <div class="mission-info">
+            <h2>{{ mission.mission_name }}</h2>
+            <p class="mission-year">{{ mission.launch_year }}</p>
+            <p>{{ mission.details }}</p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

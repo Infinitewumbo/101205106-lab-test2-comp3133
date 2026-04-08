@@ -1,0 +1,33 @@
+<div class="details-container">
+  @if (mission(); as m) {
+    <div class="header">
+      <img [src]="m.links.mission_patch_small" alt="Patch">
+      <h1>{{ m.mission_name }} (#{{ m.flight_number }})</h1>
+    </div>
+
+    <div class="content">
+      <h3>Launch Year: {{ m.launch_year }}</h3>
+      
+      <section class="rocket-info">
+        <h2>Rocket Details</h2>
+        <p><strong>Name:</strong> {{ m.rocket.rocket_name }}</p>
+        <p><strong>Type:</strong> {{ m.rocket.rocket_type }}</p>
+      </section>
+
+      <section class="mission-info">
+        <h2>Details</h2>
+        <p>{{ m.details }}</p>
+      </section>
+
+      <section class="links">
+        <h2>More Info</h2>
+        <a [href]="m.links.article_link" target="_blank">Article</a> | 
+        <a [href]="m.links.video_link" target="_blank">Video</a>
+      </section>
+    </div>
+    
+    <button routerLink="/">Back to List</button>
+  } @else {
+    <p>Loading mission details...</p>
+  }
+</div>
