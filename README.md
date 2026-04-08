@@ -17,6 +17,12 @@ This Angular application is a mission tracking dashboard that consumes the Space
 * **UI Library:** Angular Material
 * **Deployment:** [Insert Your Vercel or Render Link Here]
 
+### Mission List
+<img width="2491" height="1071" alt="image" src="https://github.com/user-attachments/assets/63e11fdc-b1af-40de-bdd1-32c7658a03d2" />
+
+### Mission Details
+<img width="1142" height="941" alt="image" src="https://github.com/user-attachments/assets/cbc05052-d465-4c5e-b88e-c6d575193127" />
+
 ### How to Run the Project Locally
 1. **Clone the Repository:**
    ```bash
